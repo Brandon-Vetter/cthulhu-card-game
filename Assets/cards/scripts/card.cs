@@ -7,19 +7,24 @@ namespace cards
     {
 
         private int[] cost;
+        private string name;
 
 
 
         // Start is called before the first frame update
         void Start()
         {
-
+            name = "card";
         }
 
         // Update is called once per frame
         void Update()
         {
 
+        }
+        public string getName()
+        {
+            return name;
         }
     }
 }
