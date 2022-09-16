@@ -1,20 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 namespace cards
 {
     public class card : MonoBehaviour
     {
-
+        [SerializeField]private int id;
         private int[] cost;
-        private string name;
+        //[SerializeField] public string name;
 
 
 
         // Start is called before the first frame update
         void Start()
         {
-            name = "card";
+
         }
 
         // Update is called once per frame
@@ -25,6 +26,10 @@ namespace cards
         public string getName()
         {
             return name;
+        }
+        public int getID()
+        {
+            return id;
         }
     }
 }
