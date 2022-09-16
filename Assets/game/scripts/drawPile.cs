@@ -6,10 +6,10 @@ using cards;
 public class drawPile : MonoBehaviour
 {
     // Start is called before the first frame update
-    private List<card> cardL;
+    private List<GameObject> cardL;
     public void Start()
     {
-        cardL = new List<card>(); 
+        cardL = new List<GameObject>(); 
     }
 
 
@@ -17,7 +17,7 @@ public class drawPile : MonoBehaviour
     {
         return cardL[ind];
     }
-    public void addDrawPile(card car)
+    public void addDrawPile(GameObject car)
     {
         cardL.Add(car);
     }

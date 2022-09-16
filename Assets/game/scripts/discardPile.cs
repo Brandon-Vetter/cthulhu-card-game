@@ -6,18 +6,18 @@ using cards;
 public class discardPile : MonoBehaviour
 {
     // Start is called before the first frame update
-    private List<card> cardL;
+    private List<GameObject> cardL;
     public void Start()
     {
-        cardL = new List<card>();
+        cardL = new List<GameObject>();
     }
 
 
-    public card getDiscardPile(int ind)
+    public GameObject getDiscardPile(int ind)
     {
         return cardL[ind];
     }
-    public void addDiscardPile(card car)
+    public void addDiscardPile(GameObject car)
     {
         cardL.Add(car);
     }

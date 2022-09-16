@@ -15,10 +15,12 @@ namespace gameManager
 
         public deck(string d = "deck",string p = "Assets/game/cards/savedDecks/")
         {
+
             deckName = d;
             path = p;
             cardL = new List<GameObject>();
-            if(File.Exists(path + deckName + ".dek"))
+            // reads the deck file and finds the cards with id inside file
+            if (File.Exists(path + deckName + ".dek"))
             {
                 List<string> cardsInFile = new List<string>();
                 Object[] AvalableCards = Resources.LoadAll("cards", typeof(GameObject));
@@ -72,6 +74,7 @@ namespace gameManager
         }
         public void saveDeck()
         {
+            // creates a file if it does not exist, writes the deck to the file
             if(!File.Exists(path + deckName + ".dek"))
             {
                 using (FileStream fs = File.Create(path + deckName + ".dek"));
