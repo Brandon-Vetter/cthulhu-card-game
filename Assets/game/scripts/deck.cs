@@ -58,15 +58,9 @@ namespace gameManager
                 path = pat;
             }
         }
-        public void removeCard(int i)
+        public void removeCard(int ind)
         {
-            foreach (GameObject car in cardL)
-            {
-                if (car.GetComponent<card>().getID()== i)
-                {
-                    cardL.Remove(car);
-                }
-            }
+            cardL.RemoveAt(ind);
         }
         public List<GameObject> getDeck()
         {

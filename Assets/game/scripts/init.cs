@@ -13,9 +13,6 @@ public class init : MonoBehaviour
     static void OnRuntimeMethodLoad()
     {
         decks = new List<deck>();
-        decks.Add(new deck("deck 1"));
-        decks.Add(new deck("deck 2"));
-        decks.Add(new deck("deck 3"));
     }
     
     static void Quit()
