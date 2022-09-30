@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using cards;
 
 namespace gameManager {
     public class hand : MonoBehaviour
@@ -10,18 +11,13 @@ namespace gameManager {
         private GameObject drawpile;
         private bool turn;
         private int slots;
-        private int y;
-        private int xmin;
-        private int xmax;
         void Start()
         {
             slots = 3;
-            y = 20;
-            xmin = -5;
-            xmax = 5;
             turn = false;
             drawpile = GameObject.Find("drawPile");
             draw();
+            Debug.Log(han.Count);
         }
 
         // Update is called once per frame
@@ -34,6 +30,7 @@ namespace gameManager {
         {
             GameObject car = drawpile.GetComponent<drawPile>().draw();
             if(car == null) return;
+            Debug.Log(car.GetComponent<card>().getName());
             han.Add(car);
         }
         public void takeTurn()
