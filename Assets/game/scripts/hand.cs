@@ -13,20 +13,12 @@ namespace gameManager {
         private bool turn;
         private int index;
         private int slots;
-        private int y;
-        private int xmin;
-        private int xmax;
-        private int selector;
         private bool selected;
         void Start()
         {
             selected = false;
             index = 0;
             slots = 3;
-            y = 20;
-            xmin = -5;
-            xmax = 5;
-            selector = 1;
             turn = false;
             drawpile = GameObject.Find("drawPile");
             draw(5);
@@ -72,9 +64,6 @@ namespace gameManager {
         {
             return turn;
         }
-        public void drawCards()
-        {
-            return;
         public void showCards()
         {
             for(int i = -1; i<2 ; i++)
