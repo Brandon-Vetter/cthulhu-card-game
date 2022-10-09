@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-<<<<<<< HEAD
-=======
 using cards;
->>>>>>> e55d235b2adbc8e1fd830bdd52fbb2297e875443
 
 namespace gameManager {
     public class hand : MonoBehaviour
@@ -16,26 +13,20 @@ namespace gameManager {
         private bool turn;
         private int index;
         private int slots;
-<<<<<<< HEAD
         private int y;
         private int xmin;
         private int xmax;
         private int selector;
-=======
         private bool selected;
->>>>>>> e55d235b2adbc8e1fd830bdd52fbb2297e875443
         void Start()
         {
             selected = false;
             index = 0;
             slots = 3;
-<<<<<<< HEAD
             y = 20;
             xmin = -5;
             xmax = 5;
             selector = 1;
-=======
->>>>>>> e55d235b2adbc8e1fd830bdd52fbb2297e875443
             turn = false;
             drawpile = GameObject.Find("drawPile");
             draw(5);
@@ -81,11 +72,9 @@ namespace gameManager {
         {
             return turn;
         }
-<<<<<<< HEAD
         public void drawCards()
         {
             return;
-=======
         public void showCards()
         {
             for(int i = -1; i<2 ; i++)
@@ -111,7 +100,6 @@ namespace gameManager {
         public bool getSelected()
         {
             return selected;
->>>>>>> e55d235b2adbc8e1fd830bdd52fbb2297e875443
         }
 
     }

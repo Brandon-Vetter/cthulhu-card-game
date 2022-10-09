@@ -534,7 +534,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenesToLoad:
   - main board
-  - title screen
 --- !u!4 &730774682
 Transform:
   m_ObjectHideFlags: 0
