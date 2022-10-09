@@ -24,6 +24,11 @@ namespace gameManager
             {
                 List<string> cardsInFile = new List<string>();
                 Object[] AvalableCards = Resources.LoadAll("cards", typeof(GameObject));
+                foreach(GameObject curCar in AvalableCards)
+                {
+                    if (!File.Exists("Assets/game/cards/cards/" + curCar.GetComponent<card>().getID())) break;
+                    curCar.GetComponent<card>().fromYaml("Assets/game/cards/cards/" + curCar.GetComponent<card>().getID());
+                }
                 StreamReader read = new StreamReader(path + deckName + ".dek");
                 while(!read.EndOfStream)
                 {
