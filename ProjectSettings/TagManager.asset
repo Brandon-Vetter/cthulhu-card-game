@@ -38,9 +38,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: playMatt
-    uniqueID: 631716169
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
