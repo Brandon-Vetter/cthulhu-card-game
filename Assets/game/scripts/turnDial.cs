@@ -22,7 +22,7 @@ namespace gameManager
             if(turn)
             {
                 player.GetComponent<hand>().takeTurn();
-                while (player.GetComponent<hand>().getTurnStatus());
+               // while (player.GetComponent<hand>().getTurnStatus());
                 turn = false;
             }
         }

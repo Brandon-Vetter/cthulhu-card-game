@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace gameManager {
     public class hand : MonoBehaviour
@@ -13,12 +14,14 @@ namespace gameManager {
         private int y;
         private int xmin;
         private int xmax;
+        private int selector;
         void Start()
         {
             slots = 3;
             y = 20;
             xmin = -5;
             xmax = 5;
+            selector = 1;
             turn = false;
             drawpile = GameObject.Find("drawPile");
             draw();
@@ -44,6 +47,10 @@ namespace gameManager {
         public bool getTurnStatus()
         {
             return turn;
+        }
+        public void drawCards()
+        {
+            return;
         }
 
     }
